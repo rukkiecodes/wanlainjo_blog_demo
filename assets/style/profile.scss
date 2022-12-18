@@ -1,4 +1,4 @@
-.form {
+.profile {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -15,11 +15,29 @@
     padding: 1em;
 }
 
+.pictureDiv {
+    width: 100px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.116);
+    backdrop-filter: blur(20px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-bottom: 1em;
+
+    i {
+        font-size: 2rem;
+        color: #fff;
+    }
+}
+
 input {
     width: 100%;
     margin-bottom: 1em;
     font-size: .9em;
     font-weight: 600;
+    background-color: #fff;
     color: rgba(0, 0, 0, 0.6);
     outline: none;
     padding-left: 1em;
@@ -27,16 +45,9 @@ input {
     height: 3em;
     border: transparent;
     border-radius: 12px;
-}
 
-.links {
-    width: 100%;
-    margin-bottom: 1em;
-    text-align: right;
-
-    a {
-        text-decoration: none;
-        color: #fff;
+    &:disabled {
+        background-color: #fff;
     }
 }
 
@@ -57,4 +68,13 @@ button {
         background-color: #3155c2;
         color: #fff;
     }
+
+    &:disabled {
+        background-color: rgba(0, 0, 0, 0.6);
+        cursor:not-allowed
+    }
+}
+
+img {
+    display: none;
 }
