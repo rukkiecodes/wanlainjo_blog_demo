@@ -27,6 +27,8 @@
   align-items: center;
   border-radius: 50%;
   margin-bottom: 1em;
+  overflow: hidden;
+  cursor: pointer;
 }
 .pictureDiv i {
   font-size: 2rem;
@@ -75,4 +77,8 @@ button:disabled {
 
 img {
   display: none;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=profile.css.map */
