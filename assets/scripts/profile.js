@@ -31,6 +31,37 @@ let userData = JSON.parse(localStorage.wanlaingoBlogData).user;
     fullName.value = response.user.name
 })()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 fullName.addEventListener('keypress', () => {
     if (fullName.value != response.user.name) button.disabled = false
     else button.disabled = true
@@ -45,7 +76,8 @@ button.addEventListener('click', async () => {
     if (fullName.value == response.user.name) return
 
     button.innerText = 'Loading...'
-    let user = await fetch('https://wanlainjoblog-production.up.railway.app/auth/updateProfile', {
+
+    await fetch('https://wanlainjoblog-production.up.railway.app/auth/updateProfile', {
         method: 'post',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -54,15 +86,47 @@ button.addEventListener('click', async () => {
         })
     })
 
-    let updateResponse = await user.json()
-
     button.innerText = 'Done'
+    
     setTimeout(() => {
         button.innerText = 'Update Profile'
         button.disabled = true
     }, 2000)
     location.reload()
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 pictureDiv.addEventListener('click', () => {
     let input = document.createElement('input')

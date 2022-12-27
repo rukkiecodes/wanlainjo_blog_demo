@@ -4,13 +4,11 @@
     transition: all .25s ease;
 }
 
+* button {
+    cursor: pointer;
+}
+
 html, body {
     margin: 0;
     padding: 0;
-}
-
-
-body {
-    background: url('../images/bg.jpg');
-    background-size: cover;
 }
