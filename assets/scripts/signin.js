@@ -5,7 +5,7 @@ let _button = document.querySelector('button')
 _button.addEventListener('click', async () => {
     if (_email.value == '' && _password.value == '') return
 
-    _button.innerText = 'Loading'
+    _button.innerText = 'Loading...'
 
     fetch('https://wanlainjoblog-production.up.railway.app/auth/signin', {
         method: 'post',
@@ -19,7 +19,7 @@ _button.addEventListener('click', async () => {
             _button.innerText = 'Sign In'
             if (data.message == 'Auth successful') {
                 localStorage.wanlaingoBlogData = JSON.stringify(data)
-                location.replace('/profile.html')
+                location.replace('/blog.html')
             }
         })
         .catch(error => {

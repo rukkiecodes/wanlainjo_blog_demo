@@ -6,7 +6,7 @@ let _button = document.querySelector('button')
 _button.addEventListener('click', async () => {
     if (_full_name.value == '' && _email.value == '' && _password.value == '') return
 
-    _button.innerText = 'Loading'
+    _button.innerText = 'Loading...'
 
     fetch('https://wanlainjoblog-production.up.railway.app/auth/signup', {
         method: 'post',
