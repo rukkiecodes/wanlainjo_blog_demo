@@ -178,7 +178,7 @@ main {
   margin: 0;
   padding: 0;
   position: relative;
-  overflow: hidden;
+  overflow-y: auto;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -186,66 +186,10 @@ main {
 main .left {
   width: 60%;
   height: 100%;
-  overflow-x: hidden;
-  overflow-y: auto;
-}
-main .left::-webkit-scrollbar {
-  width: 0px;
-}
-main .left .newPost {
-  width: 100%;
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.15);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  padding: 1em;
-  margin-bottom: 1em;
-}
-main .left .newPost .title {
-  font-size: 1rem;
-  font-weight: 700;
-  color: rgba(0, 0, 0, 0.6);
-  padding: 0.5em 1em;
-  border-radius: 8px;
-  background: #fff;
-  width: 100%;
-  outline: none;
-  border: none;
-}
-main .left .newPost .postBody {
-  font-size: 1rem;
-  font-weight: 700;
-  color: rgba(0, 0, 0, 0.6);
-  padding: 0.5em 1em;
-  border-radius: 8px;
-  background: #fff;
-  width: 100%;
-  outline: none;
-  border: none;
-  margin-top: 1em;
-  height: 100px;
-  resize: none;
-}
-main .left .newPost .controls {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  width: 100%;
-  margin-top: 1em;
-}
-main .left .newPost .controls .postButton {
-  background-color: #4169e1;
-  border: none;
-  outline: none;
-  padding: 0.5em 1em;
-  border-radius: 8px;
-  color: #fff;
-  font-size: 1rem;
-  font-weight: 700;
 }
 main .left .post-list {
   width: 100%;
+  margin: 1em;
 }
 main .left .post {
   background: rgba(255, 255, 255, 0.15);
@@ -254,12 +198,10 @@ main .left .post {
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   padding: 1em;
-  cursor: pointer;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
-  margin-bottom: 1em;
 }
 main .left .post .head {
   display: flex;
@@ -295,16 +237,11 @@ main .left .post .head .chip .avatar img {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  display: none;
 }
 main .left .post .head .chip .avatar i {
   color: rgba(0, 0, 0, 0.6);
   font-size: 0.9rem;
-}
-main .left .post .head .chip span {
-  font-size: 0.9rem;
-  font-weight: 700;
-  color: rgba(0, 0, 0, 0.6);
-  margin: 0;
 }
 main .left .post .postImageAvatar {
   width: 100px;
@@ -330,20 +267,32 @@ main .left .post .postImageAvatar span {
 main .left .post .previewImage {
   display: none;
 }
-main .left .post .postTite {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: rgba(0, 0, 0, 0.6);
-  margin: 0;
-  margin-bottom: 0.5em;
-  width: 100%;
-}
 main .left .post .postText {
   flex: 1;
   font-size: 0.9rem;
   font-weight: 600;
   color: rgba(0, 0, 0, 0.6);
   margin: 0;
+  outline: none;
+  border: none;
+  border-radius: 12px;
+  height: 70px;
+  padding: 1em;
+}
+main .left .post .controls {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1em;
+}
+main .left .post .controls button {
+  background: #4169e1;
+  border: none;
+  padding: 0.5em 1em;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 700;
 }
 main .right {
   flex: 1;
@@ -464,4 +413,4 @@ main .right {
   100% {
     transform: translateX(100%);
   }
-}/*# sourceMappingURL=blog.css.map */
+}/*# sourceMappingURL=wtite.css.map */

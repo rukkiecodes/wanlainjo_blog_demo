@@ -187,7 +187,7 @@ main {
     margin: 0;
     padding: 0;
     position: relative;
-    overflow: hidden;
+    overflow-y: auto;
 
     display: flex;
     justify-content: space-between;
@@ -196,71 +196,10 @@ main {
     .left {
         width: 60%;
         height: 100%;
-        overflow-x: hidden;
-        overflow-y: auto;
-
-        &::-webkit-scrollbar {
-            width: 0px;
-        }
-
-        .newPost {
-            width: 100%;
-            border-radius: 12px;
-            background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.18);
-            padding: 1em;
-            margin-bottom: 1em;
-
-            .title {
-                font-size: 1rem;
-                font-weight: 700;
-                color: rgba(0, 0, 0, 0.6);
-                padding: .5em 1em;
-                border-radius: 8px;
-                background: #fff;
-                width: 100%;
-                outline: none;
-                border: none;
-            }
-
-            .postBody {
-                font-size: 1rem;
-                font-weight: 700;
-                color: rgba(0, 0, 0, 0.6);
-                padding: .5em 1em;
-                border-radius: 8px;
-                background: #fff;
-                width: 100%;
-                outline: none;
-                border: none;
-                margin-top: 1em;
-                height: 100px;
-                resize: none;
-            }
-
-            .controls {
-                display: flex;
-                justify-content: flex-end;
-                align-items: center;
-                width: 100%;
-                margin-top: 1em;
-
-                .postButton {
-                    background-color: #4169e1;
-                    border: none;
-                    outline: none;
-                    padding: .5em 1em;
-                    border-radius: 8px;
-                    color: #fff;
-                    font-size: 1rem;
-                    font-weight: 700;
-                }
-            }
-        }
 
         .post-list {
             width: 100%;
+            margin: 1em;
         }
 
         .post {
@@ -269,12 +208,10 @@ main {
             border-radius: 12px;
             border: 1px solid rgba(255, 255, 255, 0.18);
             padding: 1em;
-            cursor: pointer;
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
             flex-wrap: wrap;
-            margin-bottom: 1em;
 
             .head {
                 display: flex;
@@ -309,19 +246,13 @@ main {
                             width: 100%;
                             height: 100%;
                             object-fit: cover;
+                            display: none;
                         }
 
                         i {
                             color: rgba(0, 0, 0, 0.6);
                             font-size: .9rem;
                         }
-                    }
-
-                    span {
-                        font-size: .9rem;
-                        font-weight: 700;
-                        color: rgba(0, 0, 0, 0.6);
-                        margin: 0;
                     }
                 }
             }
@@ -354,21 +285,34 @@ main {
                 display: none;
             }
 
-            .postTite {
-                font-size: 1.5rem;
-                font-weight: 700;
-                color: rgba(0, 0, 0, 0.6);
-                margin: 0;
-                margin-bottom: .5em;
-                width: 100%;
-            }
-
             .postText {
                 flex: 1;
                 font-size: .9rem;
                 font-weight: 600;
                 color: rgba(0, 0, 0, 0.6);
                 margin: 0;
+                outline: none;
+                border: none;
+                border-radius: 12px;
+                height: 70px;
+                padding: 1em;
+            }
+
+            .controls {
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+                margin-top: 1em;
+
+                button {
+                    background: #4169e1;
+                    border: none;
+                    padding: .5em 1em;
+                    border-radius: 8px;
+                    color: #fff;
+                    font-size: .8rem;
+                    font-weight: 700;
+                }
             }
         }
     }

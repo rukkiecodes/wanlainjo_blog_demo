@@ -16,10 +16,55 @@
     <div class="ball-1"></div>
     <div class="ball-2"></div>
     <div class="ball-3"></div>
-    <nav></nav>
-    <aside></aside>
-    <main></main>
-    <footer></footer>
+    <nav>
+        <div class="container">
+            <h1>Rukkie's blog</h1>
+
+            <div class="chip">
+                <div class="avatar">
+                    <img src="" alt="">
+                    <i class="fas fa-user"></i>
+                </div>
+                <span class="name">John Doe</span>
+            </div>
+        </div>
+    </nav>
+    <aside>
+        <div class="list">
+            <a href="blog.html" class="list-item active">
+                <div class="icon">
+                    <i class="fas fa-blog"></i>
+                </div>
+                <span>Posts</span>
+            </a>
+            <a href="profile.html" class="list-item">
+                <div class="icon">
+                    <i class="fas fa-user"></i>
+                </div>
+                <span>Profile</span>
+            </a>
+        </div>
+    </aside>
+    <main>
+        <div class="left">
+            <div class="newPost">
+                <input type="text" class="title" placeholder="Post Title">
+                <textarea class="postBody" placeholder="Say something"></textarea>
+                <div class="controls">
+                    <button class="postButton">Save Post</button>
+                </div>
+            </div>
+
+            <div class="post-list">
+                
+            </div>
+        </div>
+        <div class="right"></div>
+    </main>
+
+    <script src="./assets/scripts/nav.js"></script>
+    <script src="./assets/scripts/write.js"></script>
+    <script src="./assets/scripts/getAllPosts.js"></script>
 </body>
 
 </html>
