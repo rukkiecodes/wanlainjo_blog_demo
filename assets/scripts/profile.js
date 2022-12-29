@@ -1,9 +1,9 @@
-let img, icon, email, fullName, button, pictureDiv;
+let userAvatar, userIcon, email, userFullName, button, pictureDiv;
 
-img = document.querySelector('img');
-icon = document.querySelector('i');
+userAvatar = document.querySelector('.userAvatar');
+userIcon = document.querySelector('.userIcon');
 email = document.querySelector('.email');
-fullName = document.querySelector('.name');
+userFullName = document.querySelector('.name');
 button = document.querySelector('button');
 pictureDiv = document.querySelector('.pictureDiv');
 
@@ -22,13 +22,13 @@ let userData = JSON.parse(localStorage.wanlaingoBlogData).user;
     response = await user.json()
 
     if (response.user.avatar != undefined && response.user.avatar != null) {
-        img.src = response.user.avatar
-        icon.style.display = 'none'
-        img.style.display = 'initial'
+        userAvatar.src = response.user.avatar
+        userIcon.style.display = 'none'
+        userAvatar.style.display = 'initial'
     }
 
     email.value = response.user.email
-    fullName.value = response.user.name
+    userFullName.value = response.user.name
 })()
 
 
@@ -62,18 +62,18 @@ let userData = JSON.parse(localStorage.wanlaingoBlogData).user;
 
 
 
-fullName.addEventListener('keypress', () => {
-    if (fullName.value != response.user.name) button.disabled = false
+userFullName.addEventListener('keypress', () => {
+    if (userFullName.value != response.user.name) button.disabled = false
     else button.disabled = true
 })
 
-fullName.addEventListener('blur', () => {
-    if (fullName.value != response.user.name) button.disabled = false
+userFullName.addEventListener('blur', () => {
+    if (userFullName.value != response.user.name) button.disabled = false
     else button.disabled = true
 })
 
 button.addEventListener('click', async () => {
-    if (fullName.value == response.user.name) return
+    if (userFullName.value == response.user.name) return
 
     button.innerText = 'Loading...'
 
@@ -82,7 +82,7 @@ button.addEventListener('click', async () => {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
             email: userData.email,
-            name: fullName.value
+            name: userFullName.value
         })
     })
 
@@ -156,8 +156,8 @@ const uploadImage = async file => {
     let response = await imageResponse.json()
 
     if (response.message == 'Avatar updated') {
-        img.src = URL.createObjectURL(file)
-        icon.style.display = 'none'
-        img.style.display = 'initial'
+        userAvatar.src = URL.createObjectURL(file)
+        userIcon.style.display = 'none'
+        userAvatar.style.display = 'initial'
     }
 }

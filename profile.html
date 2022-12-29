@@ -8,22 +8,60 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="./assets/style/default.css">
     <link rel="stylesheet" href="./assets/style/profile.css">
+    <link rel="stylesheet" href="./assets/style/dashboard.css">
     <title>Document</title>
 </head>
 
 <body>
-    <div class="profile">
-        <div class="pictureDiv">
-            <i class="fas fa-user"></i>
-            <img src="" alt="">
+    <div class="gradient"></div>
+    <div class="ball-1"></div>
+    <div class="ball-2"></div>
+    <div class="ball-3"></div>
+    <nav>
+        <div class="container">
+            <h1>Rukkie's blog</h1>
+
+            <div class="chip">
+                <div class="avatar">
+                    <img src="" alt="">
+                    <i class="fas fa-user"></i>
+                </div>
+                <span class="name">John Doe</span>
+            </div>
         </div>
+    </nav>
+    <aside>
+        <div class="list">
+            <a href="blog.html" class="list-item active">
+                <div class="icon">
+                    <i class="fas fa-blog"></i>
+                </div>
+                <span>Posts</span>
+            </a>
+            <a href="profile.html" class="list-item">
+                <div class="icon">
+                    <i class="fas fa-user"></i>
+                </div>
+                <span>Profile</span>
+            </a>
+        </div>
+    </aside>
 
-        <input type="email" class="email" placeholder="Email" disabled>
-        <input type="text" class="name" placeholder="Name">
+    <main>
+        <div class="profile">
+            <div class="pictureDiv">
+                <i class="fas fa-user userIcon"></i>
+                <img src="" alt="" class="userAvatar">
+            </div>
 
-        <button disabled>Update Profile</button>
-    </div>
+            <input type="email" class="email" placeholder="Email" disabled>
+            <input type="text" class="name" placeholder="Name">
 
+            <button disabled>Update Profile</button>
+        </div>
+    </main>
+
+    <script src="./assets/scripts/nav.js"></script>
     <script src="./assets/scripts/profile.js"></script>
 </body>
 
