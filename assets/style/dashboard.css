@@ -1,0 +1,404 @@
+/* ----------- iPhone 4 and 4S ----------- */
+/* Portrait and Landscape */
+/* Portrait */
+/* Landscape */
+/* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
+/* Portrait and Landscape */
+/* Portrait */
+/* Landscape */
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+/* Portrait and Landscape */
+/* Portrait */
+/* Landscape */
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+/* Portrait and Landscape */
+/* Portrait */
+/* Landscape */
+/* ----------- iPhone X ----------- */
+/* Portrait and Landscape */
+/* Portrait */
+/* Landscape */
+/* ----------- Galaxy S3 ----------- */
+/* Portrait and Landscape */
+/* Portrait */
+/* Landscape */
+/* ----------- Galaxy S4, S5 and Note 3 ----------- */
+/* Portrait and Landscape */
+/* Portrait */
+/* Landscape */
+/* ----------- Galaxy S6 ----------- */
+/* Portrait and Landscape */
+/* Portrait */
+/* Landscape */
+/* ----------- Google Pixel ----------- */
+/* Portrait and Landscape */
+/* Portrait */
+/* Landscape */
+/* ----------- Google Pixel XL ----------- */
+/* Portrait and Landscape */
+/* Portrait */
+/* Landscape */
+/* ----------- HTC One ----------- */
+/* Portrait and Landscape */
+/* Portrait */
+/* Landscape */
+/* ----------- Windows Phone ----------- */
+/* Portrait and Landscape */
+/* Portrait */
+/* Landscape */
+/* ----------- iPad 1, 2, Mini and Air ----------- */
+/* Portrait and Landscape */
+/* Portrait */
+/* Landscape */
+/* ----------- iPad 3, 4 and Pro 9.7" ----------- */
+/* Portrait and Landscape */
+/* Portrait */
+/* Landscape */
+/* ----------- iPad Pro 10.5" ----------- */
+/* Portrait and Landscape */
+/* Portrait */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+/* Landscape */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+/* ----------- iPad Pro 12.9" ----------- */
+/* Portrait and Landscape */
+/* Portrait */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+/* Landscape */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+/* ----------- Galaxy Tab 2 ----------- */
+/* Portrait and Landscape */
+/* Portrait */
+/* Landscape */
+/* ----------- Galaxy Tab S ----------- */
+/* Portrait and Landscape */
+/* Portrait */
+/* Landscape */
+/* ----------- Nexus 7 ----------- */
+/* Portrait and Landscape */
+/* Portrait */
+/* Landscape */
+/* ----------- Nexus 9 ----------- */
+/* Portrait and Landscape */
+/* Portrait */
+/* Landscape */
+/* ----------- Kindle Fire HD 7" ----------- */
+/* Portrait and Landscape */
+/* Portrait */
+/* Landscape */
+/* ----------- Kindle Fire HD 8.9" ----------- */
+/* Portrait and Landscape */
+/* Portrait */
+/* Landscape */
+/* ----------- Non-Retina Screens ----------- */
+/* ----------- Retina Screens ----------- */
+/* ----------- Apple Watch ----------- */
+/* ----------- Moto 360 Watch ----------- */
+body {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  overflow: hidden;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.gradient {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-backdrop-filter: blur(200px);
+          backdrop-filter: blur(200px);
+}
+
+.ball-1 {
+  background-color: rgba(255, 0, 0, 0.438);
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  -webkit-animation: ball-1 5s ease-in-out 1s infinite alternate both;
+          animation: ball-1 5s ease-in-out 1s infinite alternate both;
+}
+
+.ball-2 {
+  background-color: rgba(0, 132, 255, 0.438);
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  -webkit-animation: ball-2 5s ease-in-out 1s infinite alternate both;
+          animation: ball-2 5s ease-in-out 1s infinite alternate both;
+}
+
+.ball-3 {
+  background-color: rgba(60, 255, 0, 0.438);
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -10%);
+  -webkit-animation: ball-3 5s ease-in-out 1s infinite alternate both;
+          animation: ball-3 5s ease-in-out 1s infinite alternate both;
+}
+
+nav {
+  width: 100%;
+  height: 7vh;
+  position: relative;
+}
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 98%;
+  max-width: 98%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+nav .container h1 {
+  letter-spacing: 1px;
+  word-spacing: 2px;
+}
+nav .container .chip {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 0.3em;
+  border-radius: 50px;
+  cursor: pointer;
+  border-radius: 50px;
+  background: linear-gradient(145deg, #e6e6e6, #ffffff);
+  box-shadow: 32px 32px 64px #b3b3b3, -32px -32px 64px #ffffff;
+}
+nav .container .avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 0.5em;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav .container .avatar img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: none;
+}
+nav .container .avatar i {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 0.9rem;
+}
+nav .container span {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+aside {
+  height: 93vh;
+  width: 15vw;
+  position: relative;
+  padding: 1em;
+}
+aside .list {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+aside .list .list-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  padding: 0.5em;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: 0.5em;
+  border: 1px solid transparent;
+}
+@media (max-width: 768px) {
+  aside .list .list-item {
+    padding: 0;
+  }
+}
+aside .list .list-item:hover {
+  background: rgba(255, 255, 255, 0.493);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+aside .list .list-item .icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 0.5em;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  aside .list .list-item .icon {
+    margin: 0;
+  }
+}
+aside .list .list-item .icon i {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 1rem;
+}
+aside .list .list-item span {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.6);
+  margin: 0;
+}
+@media (max-width: 768px) {
+  aside .list .list-item span {
+    display: none;
+  }
+}
+
+@-webkit-keyframes ball-1 {
+  0% {
+    transform: translateX(-20px);
+  }
+  25% {
+    transform: translateY(50%);
+  }
+  50% {
+    transform: translateY(50%);
+    transform: translateX(40%);
+  }
+  75% {
+    transform: translateY(100%);
+    transform: translateX(70%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes ball-1 {
+  0% {
+    transform: translateX(-20px);
+  }
+  25% {
+    transform: translateY(50%);
+  }
+  50% {
+    transform: translateY(50%);
+    transform: translateX(40%);
+  }
+  75% {
+    transform: translateY(100%);
+    transform: translateX(70%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+@-webkit-keyframes ball-2 {
+  0% {
+    transform: translateX(-50px);
+  }
+  25% {
+    transform: translateY(50%);
+  }
+  50% {
+    transform: translateY(70%);
+    transform: translateX(-40%);
+  }
+  75% {
+    transform: translateY(100%);
+    transform: translateX(-70%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes ball-2 {
+  0% {
+    transform: translateX(-50px);
+  }
+  25% {
+    transform: translateY(50%);
+  }
+  50% {
+    transform: translateY(70%);
+    transform: translateX(-40%);
+  }
+  75% {
+    transform: translateY(100%);
+    transform: translateX(-70%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@-webkit-keyframes ball-3 {
+  0% {
+    transform: translateX(-20px);
+  }
+  25% {
+    transform: translateY(-50%);
+  }
+  50% {
+    transform: translateY(-50%);
+    transform: translateX(40%);
+  }
+  75% {
+    transform: translateY(-100%);
+    transform: translateX(70%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+@keyframes ball-3 {
+  0% {
+    transform: translateX(-20px);
+  }
+  25% {
+    transform: translateY(-50%);
+  }
+  50% {
+    transform: translateY(-50%);
+    transform: translateX(40%);
+  }
+  75% {
+    transform: translateY(-100%);
+    transform: translateX(70%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}/*# sourceMappingURL=dashboard.css.map */

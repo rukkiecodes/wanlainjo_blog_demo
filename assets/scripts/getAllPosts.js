@@ -79,8 +79,15 @@ const left = document.querySelector('.left');
 
         window.addEventListener('resize', () => {
             if (window.innerWidth <= 768) {
-                left.style.display = 'none'
-                right.style.display = 'block'
+                if (right.childElementCount == 0) {
+                    console.log(right.childElementCount)
+                    left.style.display = 'none'
+                    right.style.display = 'block'
+                } else {
+                    console.log(right.childElementCount)
+                    left.style.display = 'block'
+                    right.style.display = 'none'
+                }
                 console.log(2)
 
                 post.addEventListener('click', () => {
