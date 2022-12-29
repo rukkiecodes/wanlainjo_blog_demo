@@ -234,6 +234,10 @@ main {
             padding: 1em;
             margin: 1em 0;
 
+            @include mobile {
+                margin-top: 0;
+            }
+
             .title {
                 font-size: 1rem;
                 font-weight: 700;
@@ -295,7 +299,7 @@ main {
             border-radius: 12px;
             border: 1px solid rgba(255, 255, 255, 0.18);
             padding: 1em;
-            cursor: pointer;
+            // cursor: pointer;
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
@@ -405,13 +409,17 @@ main {
                 margin: 0;
                 display: none;
             }
+
+            .closeButton {
+                display: none;
+            }
         }
     }
 
     .right {
         flex: 1;
         height: 100%;
-        padding: 1em;
+        padding: 0 1em 1em 1em;
         overflow-y: auto;
 
         @include mobile {
@@ -434,7 +442,7 @@ main {
             border-radius: 12px;
             border: 1px solid rgba(255, 255, 255, 0.18);
             padding: 1em;
-            cursor: pointer;
+            // cursor: pointer;
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
@@ -544,7 +552,50 @@ main {
                 color: rgba(0, 0, 0, 0.6);
                 margin: 0;
             }
+
+            .readMoreControles {
+                display: none;
+            }
+
+            .closeButton {
+                display: initial !important;
+            }
         }
+    }
+}
+
+.readMoreControles {
+    width: 100%;
+    
+    button {
+        background-color: transparent;
+        border: none;
+        outline: none;
+        padding: 0;
+        color: rgba(0, 0, 0, 0.6);
+        font-size: 1rem;
+        font-weight: 700;
+        margin-top: 1em;
+    }
+}
+
+.closeButton {
+    background-color: #4169e1;
+    border: none;
+    outline: none;
+    padding: .5em 1em;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 1em;
+    display: none;
+    width: 100%;
+    margin-top: 1em;
+
+
+    @include mobile {
+        display: block;
     }
 }
 

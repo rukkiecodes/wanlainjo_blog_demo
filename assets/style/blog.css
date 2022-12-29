@@ -328,6 +328,11 @@ main .left .newPost {
   padding: 1em;
   margin: 1em 0;
 }
+@media (max-width: 768px) {
+  main .left .newPost {
+    margin-top: 0;
+  }
+}
 main .left .newPost .title {
   font-size: 1rem;
   font-weight: 700;
@@ -383,7 +388,6 @@ main .left .post {
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   padding: 1em;
-  cursor: pointer;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -482,10 +486,13 @@ main .left .post .postText2 {
   margin: 0;
   display: none;
 }
+main .left .post .closeButton {
+  display: none;
+}
 main .right {
   flex: 1;
   height: 100%;
-  padding: 1em;
+  padding: 0 1em 1em 1em;
   overflow-y: auto;
 }
 @media (max-width: 768px) {
@@ -508,7 +515,6 @@ main .right .post {
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   padding: 1em;
-  cursor: pointer;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -606,6 +612,46 @@ main .right .post .postText2 {
   font-weight: 600;
   color: rgba(0, 0, 0, 0.6);
   margin: 0;
+}
+main .right .post .readMoreControles {
+  display: none;
+}
+main .right .post .closeButton {
+  display: initial !important;
+}
+
+.readMoreControles {
+  width: 100%;
+}
+.readMoreControles button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 0;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 1rem;
+  font-weight: 700;
+  margin-top: 1em;
+}
+
+.closeButton {
+  background-color: #4169e1;
+  border: none;
+  outline: none;
+  padding: 0.5em 1em;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 1em;
+  display: none;
+  width: 100%;
+  margin-top: 1em;
+}
+@media (max-width: 768px) {
+  .closeButton {
+    display: block;
+  }
 }
 
 @-webkit-keyframes ball-1 {

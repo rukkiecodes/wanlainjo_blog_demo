@@ -1,5 +1,6 @@
 const postList = document.querySelector('.post-list');
 const right = document.querySelector('.right');
+const left = document.querySelector('.left');
 
 (async () => {
     let posts = await fetch('https://wanlainjoblog-production.up.railway.app/post/getAllPosts', {
@@ -29,14 +30,97 @@ const right = document.querySelector('.right');
                                     <span class="postText2">
                                         ${post.text}
                                     </span>
+                                    <div class="readMoreControles">
+                                        <button class="readMore">Read more</button>
+                                    </div>
+
+                                    <button class="closeButton">Close</button>
                                 </div>`
     });
 
-    const allPosts = document.querySelectorAll('.post');
+    const allPosts = document.querySelectorAll('.readMore');
 
     allPosts.forEach(post => {
+        let postElement = post.parentElement.parentElement.outerHTML
+
         post.addEventListener('click', () => {
-            right.innerHTML = post.outerHTML
+            right.innerHTML = postElement
+
+            const closeButton = document.querySelectorAll('.closeButton');
+            closeButton.forEach(close => {
+                close.addEventListener('click', () => {
+                    right.innerHTML = ''
+                    // left.style.display = 'block'
+                    // right.style.display = 'none'
+                })
+            })
+        })
+
+        if (window.innerWidth <= 768) {
+            console.log(1)
+            post.addEventListener('click', () => {
+                right.innerHTML = postElement
+
+                left.style.display = 'none'
+                right.style.display = 'block'
+                console.log(1)
+
+                const closeButton = document.querySelectorAll('.closeButton');
+
+                closeButton.forEach(close => {
+                    close.addEventListener('click', () => {
+                        right.innerHTML = ''
+                        left.style.display = 'block'
+                        right.style.display = 'none'
+                    })
+                })
+            })
+        }
+
+        window.addEventListener('resize', () => {
+            if (window.innerWidth <= 768) {
+                left.style.display = 'none'
+                right.style.display = 'block'
+                console.log(2)
+
+                post.addEventListener('click', () => {
+                    right.innerHTML = postElement
+
+                    left.style.display = 'none'
+                    right.style.display = 'block'
+                    console.log(3)
+
+                    const closeButton = document.querySelectorAll('.closeButton');
+
+                    closeButton.forEach(close => {
+                        close.addEventListener('click', () => {
+                            right.innerHTML = ''
+                            left.style.display = 'block'
+                            right.style.display = 'none'
+                        })
+                    })
+                })
+            } else {
+                left.style.display = 'block'
+                right.style.display = 'block'
+                console.log(4)
+
+                post.addEventListener('click', () => {
+                    right.innerHTML = postElement
+
+                    left.style.display = 'block'
+                    right.style.display = 'block'
+                    console.log(5)
+
+                    const closeButton = document.querySelectorAll('.closeButton');
+
+                    closeButton.forEach(close => {
+                        close.addEventListener('click', () => {
+                            right.innerHTML = ''
+                        })
+                    })
+                })
+            }
         })
     })
-})()
+})();
