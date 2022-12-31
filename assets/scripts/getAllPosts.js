@@ -25,7 +25,7 @@ const left = document.querySelector('.left');
                                     <p class="postTite">${post.title}</p>
 
                                     <span class="postText">
-                                        ${post.text.slice(0, 200)}
+                                        ${post.text.slice(0, 200)}...
                                     </span>
                                     <span class="postText2">
                                         ${post.text}
